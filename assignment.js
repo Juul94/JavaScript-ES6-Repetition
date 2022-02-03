@@ -6,10 +6,6 @@ const transactions = require('./simple-transaction-data').data;
 const filterFunction = (data) => {
     return data.filter((transaction) => {
 
-        //   1. 'credit_card_company' is 'VISA'
-        //   2. 'transaction_date' is 2015 or later
-        //   3. price is 50 or above
-
         const newDate = parseInt(transaction.transaction_date.substring(0,4));
         const newPrice = parseInt(transaction.price);
 
